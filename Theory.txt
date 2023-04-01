@@ -1,0 +1,74 @@
+1. What are the limitations of Selenium testing?
+- Su curva de aprendizaje es mayor en comparación a otros marcos de automatización
+- No posee uan función de informes incorcorporada
+- Con selenium no podemos probar aplicaciones nativas moviles ni de escritorio
+- No permite realizar pruebas automatizadas a servicios SOAP o REST
+
+2. What are the types of waits supported by WebDriver?
+- Explicit wait (la que se recomienda usar)
+- Implicit wait
+- Fluent wait
+
+3. What is the major difference between driver.close() and driver.quit()
+driver.close() -> Cierra la ventana sobre la cual se tiene el foco en la ejecución
+driver.quit() -> Cierra totalmente el controlador y todas las ventanas asociadas a el
+
+4. Can Captcha be automated?
+lo que se indica en toda la documentación que se encuentra es que NO, un captcha no puede ser automatizado, de hecho, si un captcha se puede saltar
+con una automatización debe reportarse como un error porque no esta cumpliendo con su función, pero desde mi experiencia puedo decir DEPENDE, 
+por ejemplo, sin son los captchas que solo traen numeros y letras se puede usar una herramienta de ML como Textract
+de AWS para saltar los captchas, tambien en los captchas que trae imagenes para seleccionar, normalmente trae una opción de verificación con un automatizado
+la cual tambien se puede procesar para poder pasar ese captcha, ninguna de estas opciones es 100% efectiva, pero en mi experiencia hemos logrado una eficiencia del 80%
+en resolver captchas a traves de la automatizacion
+
+5. What does the switchTo() command do?
+Permite moverse entre los Iframes que existan en el DOM para poder interactuar sin problema con los elementos de cada Iframe
+
+6. When do we use findElement() and findElements()?
+- findElement() lo usamos para obtener UN solo elemento dentro de la pagina web que coincida con el valor del localizador, si 
+                hay varios elementos que coincidan con nuestro localizador retorna el primero que encuentre
+
+- findElements() lo usamos cuando necesitamos retornar una lista con todos los elementos dentro de la pagina web que coincidan con el valor
+                 del localizador que indiquemos
+
+7. Explain how API testing differs from unit testing.
+- Las pruebas de API normalmente son pruebas de caja negra, las pruebas unitarias son pruebas de caja blanca
+- En las pruebas de API se tiene que ver el sistema como un todo, las pruebas unitarias se encargan de probar las unidades mas pequeñas del software normalmente enfocandose en las funciones
+- Normalmente las pruebas de API la llevan a cabo el equipo de pruebas, mientras que las pruebas unitarias normalmente la llevan a cabo los desarrolladores
+- Las pruebas API son mas complejas y se requiere mas tiempo para llevarse a cabo ya que evalua las funcionalidades de principio a fin, las pruebas unitarias son mas limitadas ya que evaluan si cada unidad de codigo funciona por separado segun lo esperado
+
+
+8. How do APIs work?
+Las Apis son un conjunto de reglas, protocolos y herramientas que permiten que diferentes aplicaciones o diferentes partes de un mismo sistema se comuniquen entre sí y compartan información y recursos.
+Las Apis funcionan como un puente entre las peticiones de datos que se realizan y las respuestas que se retornan, uan api es quien permite integrar el software de las aplicaciones
+
+9. What are the advantages of API Testing?
+- Permite realizar pruebas en etapas mucho mas tempranas del desarrollo de software
+- son mas faciles de mantener
+- Se ejecutan en un tiempo mucho menor en comparación de las pruebas UI
+- Nos ayuda a validar la consistencia e integridad de la data del sistema
+- A nivel de automatización se pueden implementar de manera mas rapida
+
+10. What are the advantages of UI Testing?
+- Nos permite asegurar que el usuario final tenga la mejor experiencia al navegar en nuestro software
+- Nos permite comprobar que los elementos visuales se visualicen como lo esperamos
+- Permiten asegurarse de que las funcionalidades del sistema son como se planearon y generan valor al usuario final
+
+
+11. What is Latency in API testing?
+Es el tiempo que tarda el servido en responder a una peticion hecha por el cliente
+
+12. List the most common status code that can response an API
+- 200 "Ok"
+- 201 "Created"
+- 202 "Accepted"
+- 204 "No Content"
+- 302 "Moviso temporalmente"
+- 400 "Bad request"
+- 401 "Unauthorized"
+- 403 "Forbidden"
+- 404 "Not found"
+- 500 "Internal server error"
+- 502 "Bad Gateway"
+- 503 "Service unavailable"
+- 504 "Gateway Timeout"
